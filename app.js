@@ -23,7 +23,7 @@ class Can {
 
    
 }
-export default Can;
+
 
 const can = new Can(document.querySelector(".can img"));
 const meteors = [];
@@ -46,7 +46,7 @@ function fixedNumber(Min,Max){
 }
 console.log(fixedNumber(1,3))
 
-export function createMeteorite(delta){
+ function createMeteorite(delta){
     
     const meteorit = document.createElement("img");
     meteorit.src="./img/meteor.png";

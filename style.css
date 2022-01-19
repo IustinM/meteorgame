@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+
+.game {
+  width: 100vw;
+  min-height: 100vh;
+  background: url(./img/ground.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.street img {
+  padding-bottom: 5rem;
+}
+.car {
+  width: 10px;
+}
+.can img {
+  position: absolute;
+
+  top: calc(var(--y) * 1vh);
+  left: calc(var(--x) * 1vw);
+  transform: translate(-50%, -60%);
+  right: 60%;
+  cursor: pointer;
+  width: 7vw;
+}
+
+.meteor {
+  --x: 50;
+  --y: 20;
+  position: absolute;
+
+  top: calc(var(--y) * 1vh);
+  left: calc(var(--x) * 1vw);
+  transform: translate(-50%, -60%);
+  width: 4vw;
+}
+.score {
+  font-family: "VT323", monospace;
+  z-index: 15;
+  font-size: 5rem;
+  position: absolute;
+  padding: 0.5rem 3rem;
+  color: white;
+  background: rgba(192, 192, 192, 0.205);
+}
+.lose {
+  font-family: "VT323", monospace;
+  background: white;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 150;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.lose h2 {
+  font-size: 5rem;
+  padding: 4rem;
+}
+.lose p {
+  font-size: 4rem;
+}
+
+.lose button {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  background: none;
+  border: 5px solid black;
+  cursor: pointer;
+  font-family: "VT323", monospace;
+}
+.lose.active {
+  display: flex;
+}

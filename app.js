@@ -33,7 +33,7 @@ const meteorDiv = document.querySelector(".meteor-field");
 const lose = document.querySelector(".lose");
 const loseText = lose.querySelector('p');
 const playAgain = lose.querySelector('button');
-const meteorFall = 0.0125;;
+const meteorFall = 0.1225;
 
 
 // functions 
@@ -44,7 +44,7 @@ function randomNumber (){
 function fixedNumber(Min,Max){
     return Math.floor(Math.random()*(Max-Min +1) + Min)
 }
-console.log(fixedNumber(1,3))
+
 
  function createMeteorite(delta){
     
@@ -71,7 +71,7 @@ console.log(fixedNumber(1,3))
 }
 function updateMeteor(delta){
     meteors.forEach(meteor =>{
-        meteor.y = meteor.y + delta /10 + meteorFall;
+        meteor.y = meteor.y + delta /10  + Math.random();
         if(meteor.y > window.innerHeight){
             return;
         }

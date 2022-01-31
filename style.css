@@ -35,7 +35,7 @@ body {
 
 .meteor {
   --x: 50;
-  --y: 20;
+  --y: 10;
   position: absolute;
 
   top: calc(var(--y) * 1vh);

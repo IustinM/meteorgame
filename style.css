@@ -52,7 +52,20 @@ body {
   color: white;
   background: rgba(192, 192, 192, 0.205);
 }
-.lose {
+.resize {
+  font-family: "VT323", monospace;
+  background: white;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 160;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.start {
   font-family: "VT323", monospace;
   background: white;
   width: 100%;
@@ -63,6 +76,61 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.playing {
+  display: none;
+}
+.start h1 {
+  font-size: 3.5rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border: 0.4rem solid black;
+}
+.difficulty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.difficulty h3 {
+  font-size: 2rem;
+  padding: 3rem 2rem 2rem 2rem;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.buttons button {
+  margin: 0rem 2rem;
+  padding: 1rem 2rem;
+  font-family: "VT323", monospace;
+  font-size: 1.2rem;
+  background: none;
+  border: 3px solid black;
+  cursor: pointer;
+  transition: 0.1s ease all;
+}
+.buttons button:hover {
+  color: white;
+  background: black;
+}
+.buttons button.active {
+  color: white;
+  background: black;
+}
+.lose {
+  font-family: "VT323", monospace;
+  background: white;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 150;
+  position: absolute;
+  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.lose {
   display: none;
 }
 .lose h2 {
@@ -84,4 +152,10 @@ body {
 }
 .lose.active {
   display: flex;
+}
+
+@media screen and (max-width: 1200px) {
+  .resize {
+    display: flex;
+  }
 }
